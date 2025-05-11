@@ -1,8 +1,15 @@
 
-import HomePage from "./HomePage";
+import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Index = () => {
-  return <HomePage />;
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    navigate('/home');
+  }, [navigate]);
+
+  return null; // This component will redirect immediately, so no need to render anything
 };
 
 export default Index;

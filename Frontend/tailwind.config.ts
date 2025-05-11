@@ -53,6 +53,14 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				success: {
+					DEFAULT: 'hsl(var(--success))',
+					foreground: 'hsl(var(--success-foreground))'
+				},
+				warning: {
+					DEFAULT: 'hsl(var(--warning))',
+					foreground: 'hsl(var(--warning-foreground))'
+				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
@@ -62,20 +70,6 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				},
-				blockchain: {
-					blue: '#3B82F6',
-					green: '#10B981',
-					gray: '#F1F0FB',
-					lightBlue: '#E1F5FE',
-					softGreen: '#F2FCE2',
-					softYellow: '#FEF7CD',
-					softPurple: '#E5DEFF',
-					softPink: '#FFDEE2',
-					softPeach: '#FDE1D3',
-					lightGray: '#F9FAFB',
-					dark: '#111827',
-					medium: '#6B7280',
 				}
 			},
 			borderRadius: {
@@ -100,7 +94,7 @@ export default {
 						height: '0'
 					}
 				},
-				'fade-in': {
+				'count-up': {
 					'0%': {
 						opacity: '0',
 						transform: 'translateY(10px)'
@@ -110,27 +104,27 @@ export default {
 						transform: 'translateY(0)'
 					}
 				},
-				'scale-in': {
+				'slide-in': {
 					'0%': {
 						opacity: '0',
-						transform: 'scale(0.95)'
+						transform: 'translateX(-20px)'
 					},
 					'100%': {
 						opacity: '1',
-						transform: 'scale(1)'
+						transform: 'translateX(0)'
 					}
+				},
+				'marquee': {
+					'0%': { transform: 'translateX(0)' },
+					'100%': { transform: 'translateX(-100%)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
-				'fade-in': 'fade-in 0.5s ease-out',
-				'scale-in': 'scale-in 0.3s ease-out'
-			},
-			backgroundImage: {
-				'soft-gradient': 'linear-gradient(to right, #e6b980 0%, #eacda3 100%)',
-				'blue-gradient': 'linear-gradient(90deg, #e1effe 0%, #f9fafb 100%)',
-				'green-gradient': 'linear-gradient(90deg, #f2fce2 0%, #eafbea 100%)',
+				'count-up': 'count-up 0.5s ease-out forwards',
+				'slide-in': 'slide-in 0.3s ease-out forwards',
+				'marquee': 'marquee 25s linear infinite',
 			}
 		}
 	},
